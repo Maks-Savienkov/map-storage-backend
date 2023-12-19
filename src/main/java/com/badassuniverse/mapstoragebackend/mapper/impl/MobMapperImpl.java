@@ -23,7 +23,7 @@ public class MobMapperImpl implements MobMapper {
             mobDto.setSpawnRadius(model.getSpawnRadius());
             mobDto.setSpawnTryCount(model.getSpawnTryCount());
             mobDto.setIcon(model.getIcon());
-            //mobDto.setRoomId(model.getRoom().getId());
+            mobDto.setRoomId(model.getRoom().getId());
             mobDto.setColor(model.getColor());
             return mobDto;
         }
@@ -34,7 +34,7 @@ public class MobMapperImpl implements MobMapper {
             return null;
         } else {
             return Mob.builder()
-                    //.room(room)
+                    .room(room)
                     .name(dto.getName())
                     .inGameMobId(dto.getInGameMobId())
                     .roomOffsetX(dto.getRoomOffsetX())

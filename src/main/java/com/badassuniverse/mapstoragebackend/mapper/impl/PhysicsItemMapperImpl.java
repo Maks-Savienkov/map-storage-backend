@@ -25,7 +25,7 @@ public class PhysicsItemMapperImpl implements PhysicsItemMapper {
                     .spawnTryCount(model.getSpawnTryCount())
                     .icon(model.getIcon())
                     .color(model.getColor())
-                    //.roomId(model.getRoom().getId())
+                    .roomId(model.getRoom().getId())
                     .build();
         }
     }
@@ -35,7 +35,7 @@ public class PhysicsItemMapperImpl implements PhysicsItemMapper {
             return null;
         } else {
             return PhysicsItem.builder()
-                    //.room(room)
+                    .room(room)
                     .inGamePhysicsItemId(dto.getInGamePhysicsItemId())
                     .simulatePhysics(dto.getSimulatePhysics())
                     .roomOffsetX(dto.getRoomOffsetX())

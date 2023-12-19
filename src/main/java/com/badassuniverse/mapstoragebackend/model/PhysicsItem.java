@@ -19,6 +19,10 @@ public class PhysicsItem {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
+    @ManyToOne
+    @JoinColumn(name="room_id", nullable = false)
+    private Room room;
+
     @Convert(converter = ColorConverter.class)
     private Color color;
 

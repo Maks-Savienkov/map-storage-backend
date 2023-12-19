@@ -39,6 +39,7 @@ public class FacadeMapperImpl implements FacadeMapper {
                     .floor(dto.getFloor())
                     .rotation(Direction.valueOf(dto.getRotation()))
                     .color(dto.getColor())
+                    .map(map)
                     .build();
         }
     }
