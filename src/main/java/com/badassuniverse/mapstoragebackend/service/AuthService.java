@@ -2,7 +2,11 @@ package com.badassuniverse.mapstoragebackend.service;
 
 import com.badassuniverse.mapstoragebackend.dtos.JwtRequest;
 import com.badassuniverse.mapstoragebackend.dtos.JwtResponse;
+import com.badassuniverse.mapstoragebackend.dtos.RegistrationUserDto;
+import com.badassuniverse.mapstoragebackend.dtos.UserDto;
 import com.badassuniverse.mapstoragebackend.exceptions.AuthTokenCreatingException;
+import com.badassuniverse.mapstoragebackend.exceptions.UserCreatingException;
+import com.badassuniverse.mapstoragebackend.model.User;
 import com.badassuniverse.mapstoragebackend.utils.JwtTokenUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -34,5 +38,17 @@ public class AuthService {
         String token = jwtTokenUtils.generateToken(userDetails);
 
         return new JwtResponse(token);
+    }
+
+    public UserDto createNewUser(@RequestBody RegistrationUserDto registrationUserDto) {
+        log.info("Registration new user");
+        if (!registrationUserDto.getPassword().equals(registrationUserDto.getConfirmPassword())) {
+            throw new UserCreatingException("Password mismatch");
+        }
+        if (userService.findByUsername(registrationUserDto.getUsername()).isPresent()) {
+            throw new UserCreatingException("This user name is already taken");
+        }
+        User user = userService.createUser(registrationUserDto);
+        return new UserDto(user.getId(), user.getUsername(), user.getActive());
     }
 }
