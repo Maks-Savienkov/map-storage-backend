@@ -17,6 +17,7 @@ public class MapDto {
     @JsonProperty("yLength")
     private Integer yLength;
 
+    private Integer userId;
     private Integer playerSpawnRoomId;
     private String version;
     private List<FacadeDto> facades;

@@ -32,7 +32,8 @@ public class MapMapperImpl implements MapMapper {
             List<RoomDto> rooms = roomListMapper.toDTOList(model.getRooms());
             Integer xLength = model.getXLength();
             Integer yLength = model.getYLength();
-            return new MapDto(name, xLength, yLength, playerSpawnRoomId, version, facades, rooms);
+            Integer userId = model.getUser().getId();
+            return new MapDto(name, xLength, yLength, userId, playerSpawnRoomId, version, facades, rooms);
         }
     }
 

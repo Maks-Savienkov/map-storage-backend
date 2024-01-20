@@ -22,9 +22,9 @@ public class Room {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-//    @ManyToOne
-//    @JoinColumn(name="map_id", nullable=false)
-//    private Map map;
+    @ManyToOne
+    @JoinColumn(name="map_id", nullable=false)
+    private Map map;
 
     @Nullable
     private String name;
