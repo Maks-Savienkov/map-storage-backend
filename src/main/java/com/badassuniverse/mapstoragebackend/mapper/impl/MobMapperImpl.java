@@ -13,7 +13,7 @@ public class MobMapperImpl implements MobMapper {
             return null;
         } else {
             MobDto mobDto = new MobDto();
-            mobDto.setId(mobDto.getId());
+            mobDto.setId(model.getId());
             mobDto.setName(model.getName());
             mobDto.setInGameMobId(model.getInGameMobId());
             mobDto.setRoomOffsetX(model.getRoomOffsetX());
