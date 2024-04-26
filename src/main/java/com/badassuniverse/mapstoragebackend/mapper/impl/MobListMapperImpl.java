@@ -1,6 +1,6 @@
 package com.badassuniverse.mapstoragebackend.mapper.impl;
 
-import com.badassuniverse.mapstoragebackend.dtos.MobDto;
+import com.badassuniverse.mapstoragebackend.dto.MobDto;
 import com.badassuniverse.mapstoragebackend.mapper.MobListMapper;
 import com.badassuniverse.mapstoragebackend.mapper.MobMapper;
 import com.badassuniverse.mapstoragebackend.model.Mob;

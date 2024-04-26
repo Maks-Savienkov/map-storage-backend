@@ -1,7 +1,7 @@
 package com.badassuniverse.mapstoragebackend.service;
 
-import com.badassuniverse.mapstoragebackend.dtos.RegistrationUserDto;
-import com.badassuniverse.mapstoragebackend.dtos.UserDto;
+import com.badassuniverse.mapstoragebackend.dto.RegistrationUserDto;
+import com.badassuniverse.mapstoragebackend.dto.UserDto;
 import com.badassuniverse.mapstoragebackend.mapper.UserMapper;
 import com.badassuniverse.mapstoragebackend.model.User;
 import com.badassuniverse.mapstoragebackend.repo.UserRepository;

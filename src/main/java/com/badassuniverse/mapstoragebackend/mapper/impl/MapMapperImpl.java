@@ -1,8 +1,6 @@
 package com.badassuniverse.mapstoragebackend.mapper.impl;
 
-import com.badassuniverse.mapstoragebackend.dtos.FacadeDto;
-import com.badassuniverse.mapstoragebackend.dtos.MapDto;
-import com.badassuniverse.mapstoragebackend.dtos.RoomDto;
+import com.badassuniverse.mapstoragebackend.dto.MapDto;
 import com.badassuniverse.mapstoragebackend.mapper.FacadeListMapper;
 import com.badassuniverse.mapstoragebackend.mapper.MapMapper;
 import com.badassuniverse.mapstoragebackend.mapper.RoomListMapper;
@@ -11,8 +9,6 @@ import com.badassuniverse.mapstoragebackend.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 @Component
 @RequiredArgsConstructor

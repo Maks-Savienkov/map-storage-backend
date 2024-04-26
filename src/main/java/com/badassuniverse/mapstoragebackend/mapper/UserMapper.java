@@ -1,6 +1,6 @@
 package com.badassuniverse.mapstoragebackend.mapper;
 
-import com.badassuniverse.mapstoragebackend.dtos.UserDto;
+import com.badassuniverse.mapstoragebackend.dto.UserDto;
 import com.badassuniverse.mapstoragebackend.model.User;
 import org.mapstruct.Mapper;
 

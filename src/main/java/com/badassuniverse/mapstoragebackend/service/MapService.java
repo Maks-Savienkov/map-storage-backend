@@ -1,6 +1,6 @@
 package com.badassuniverse.mapstoragebackend.service;
 
-import com.badassuniverse.mapstoragebackend.dtos.MapDto;
+import com.badassuniverse.mapstoragebackend.dto.MapDto;
 import com.badassuniverse.mapstoragebackend.exceptions.UserNotAuthorizedException;
 import com.badassuniverse.mapstoragebackend.mapper.MapMapper;
 import com.badassuniverse.mapstoragebackend.model.Map;

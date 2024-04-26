@@ -1,6 +1,6 @@
 package com.badassuniverse.mapstoragebackend.mapper.impl;
 
-import com.badassuniverse.mapstoragebackend.dtos.RoomDto;
+import com.badassuniverse.mapstoragebackend.dto.RoomDto;
 import com.badassuniverse.mapstoragebackend.mapper.RoomListMapper;
 import com.badassuniverse.mapstoragebackend.mapper.RoomMapper;
 import com.badassuniverse.mapstoragebackend.model.Map;

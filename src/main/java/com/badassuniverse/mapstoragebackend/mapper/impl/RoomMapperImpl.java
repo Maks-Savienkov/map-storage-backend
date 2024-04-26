@@ -1,13 +1,12 @@
 package com.badassuniverse.mapstoragebackend.mapper.impl;
 
-import com.badassuniverse.mapstoragebackend.dtos.RoomDto;
+import com.badassuniverse.mapstoragebackend.dto.RoomDto;
 import com.badassuniverse.mapstoragebackend.mapper.MobListMapper;
 import com.badassuniverse.mapstoragebackend.mapper.PhysicsItemListMapper;
 import com.badassuniverse.mapstoragebackend.mapper.RoomMapper;
 import com.badassuniverse.mapstoragebackend.model.Direction;
 import com.badassuniverse.mapstoragebackend.model.Map;
 import com.badassuniverse.mapstoragebackend.model.Room;
-import com.badassuniverse.mapstoragebackend.repo.MapRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package com.badassuniverse.mapstoragebackend.dtos;
+package com.badassuniverse.mapstoragebackend.dto;
 
 import com.badassuniverse.mapstoragebackend.model.Color;
 import com.fasterxml.jackson.annotation.JsonProperty;

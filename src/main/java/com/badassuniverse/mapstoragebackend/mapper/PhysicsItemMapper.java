@@ -1,6 +1,6 @@
 package com.badassuniverse.mapstoragebackend.mapper;
 
-import com.badassuniverse.mapstoragebackend.dtos.PhysicsItemDto;
+import com.badassuniverse.mapstoragebackend.dto.PhysicsItemDto;
 import com.badassuniverse.mapstoragebackend.model.PhysicsItem;
 import com.badassuniverse.mapstoragebackend.model.Room;
 

@@ -1,6 +1,6 @@
 package com.badassuniverse.mapstoragebackend.controller;
 
-import com.badassuniverse.mapstoragebackend.dtos.UserDto;
+import com.badassuniverse.mapstoragebackend.dto.UserDto;
 import com.badassuniverse.mapstoragebackend.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
