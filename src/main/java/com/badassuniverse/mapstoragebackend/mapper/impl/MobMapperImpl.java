@@ -12,20 +12,20 @@ public class MobMapperImpl implements MobMapper {
         if (model == null) {
             return null;
         } else {
-            MobDto mobDto = new MobDto();
-            mobDto.setId(model.getId());
-            mobDto.setName(model.getName());
-            mobDto.setInGameMobId(model.getInGameMobId());
-            mobDto.setRoomOffsetX(model.getRoomOffsetX());
-            mobDto.setRoomOffsetY(model.getRoomOffsetY());
-            mobDto.setIsRotationRandom(model.getIsRotationRandom());
-            mobDto.setZAngleRotation(model.getZAngleRotation());
-            mobDto.setSpawnRadius(model.getSpawnRadius());
-            mobDto.setSpawnTryCount(model.getSpawnTryCount());
-            mobDto.setIcon(model.getIcon());
-            mobDto.setRoomId(model.getRoom().getId());
-            mobDto.setColor(model.getColor());
-            return mobDto;
+            return MobDto.builder()
+                    .id(model.getId())
+                    .roomId(model.getRoom().getId())
+                    .name(model.getName())
+                    .inGameMobId(model.getInGameMobId())
+                    .roomOffsetX(model.getRoomOffsetX())
+                    .roomOffsetY(model.getRoomOffsetY())
+                    .isRotationRandom(model.getIsRotationRandom())
+                    .zAngleRotation(model.getZAngleRotation())
+                    .spawnRadius(model.getSpawnRadius())
+                    .spawnTryCount(model.getSpawnTryCount())
+                    .icon(model.getIcon())
+                    .color(model.getColor())
+                    .build();
         }
     }
 
