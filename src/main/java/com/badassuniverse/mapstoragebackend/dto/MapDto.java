@@ -3,11 +3,13 @@ package com.badassuniverse.mapstoragebackend.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Builder;
 
 import java.util.List;
 
 @Data
 @AllArgsConstructor
+@Builder
 public class MapDto {
     private String name;
 

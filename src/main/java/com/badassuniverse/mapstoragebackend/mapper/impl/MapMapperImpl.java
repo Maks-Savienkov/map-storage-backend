@@ -21,15 +21,16 @@ public class MapMapperImpl implements MapMapper {
         if (model == null) {
             return null;
         } else {
-            String name = model.getName();
-            Integer playerSpawnRoomId = model.getPlayerSpawnRoomId();
-            String version = model.getVersion();
-            List<FacadeDto> facades = facadeListMapper.toDTOList(model.getFacades());
-            List<RoomDto> rooms = roomListMapper.toDTOList(model.getRooms());
-            Integer xLength = model.getXLength();
-            Integer yLength = model.getYLength();
-            Integer userId = model.getUser().getId();
-            return new MapDto(name, xLength, yLength, userId, playerSpawnRoomId, version, facades, rooms);
+            return MapDto.builder()
+                    .name(model.getName())
+                    .playerSpawnRoomId(model.getPlayerSpawnRoomId())
+                    .version(model.getVersion())
+                    .facades(facadeListMapper.toDTOList(model.getFacades()))
+                    .rooms(roomListMapper.toDTOList(model.getRooms()))
+                    .xLength(model.getXLength())
+                    .yLength(model.getYLength())
+                    .userId(model.getUser().getId())
+                    .build();
         }
     }
 
