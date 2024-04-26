@@ -1,4 +1,4 @@
-package com.badassuniverse.mapstoragebackend.dtos;
+package com.badassuniverse.mapstoragebackend.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

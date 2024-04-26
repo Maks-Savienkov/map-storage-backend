@@ -1,6 +1,6 @@
 package com.badassuniverse.mapstoragebackend.controller;
 
-import com.badassuniverse.mapstoragebackend.dtos.MapDto;
+import com.badassuniverse.mapstoragebackend.dto.MapDto;
 import com.badassuniverse.mapstoragebackend.service.MapService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;

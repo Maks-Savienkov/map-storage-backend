@@ -1,6 +1,6 @@
 package com.badassuniverse.mapstoragebackend.mapper.impl;
 
-import com.badassuniverse.mapstoragebackend.dtos.FacadeDto;
+import com.badassuniverse.mapstoragebackend.dto.FacadeDto;
 import com.badassuniverse.mapstoragebackend.mapper.FacadeListMapper;
 import com.badassuniverse.mapstoragebackend.mapper.FacadeMapper;
 import com.badassuniverse.mapstoragebackend.model.Facade;

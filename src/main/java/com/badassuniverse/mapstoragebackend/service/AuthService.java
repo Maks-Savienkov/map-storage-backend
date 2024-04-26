@@ -1,9 +1,9 @@
 package com.badassuniverse.mapstoragebackend.service;
 
-import com.badassuniverse.mapstoragebackend.dtos.JwtRequest;
-import com.badassuniverse.mapstoragebackend.dtos.JwtResponse;
-import com.badassuniverse.mapstoragebackend.dtos.RegistrationUserDto;
-import com.badassuniverse.mapstoragebackend.dtos.UserDto;
+import com.badassuniverse.mapstoragebackend.dto.JwtRequest;
+import com.badassuniverse.mapstoragebackend.dto.JwtResponse;
+import com.badassuniverse.mapstoragebackend.dto.RegistrationUserDto;
+import com.badassuniverse.mapstoragebackend.dto.UserDto;
 import com.badassuniverse.mapstoragebackend.exceptions.AuthTokenCreatingException;
 import com.badassuniverse.mapstoragebackend.exceptions.UserCreatingException;
 import com.badassuniverse.mapstoragebackend.model.User;
