@@ -48,6 +48,7 @@ public class UserService implements UserDetailsService {
     @Override
     @Transactional
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        log.info("Loading user with username: " + username);
         User user = findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User %s not found".formatted(username)));
 
@@ -61,12 +62,15 @@ public class UserService implements UserDetailsService {
     }
 
     public List<UserDto> getAll() {
+        log.info("Getting all users.");
         return ((List<User>) repository.findAll()).stream()
                 .map(mapper::toDTO)
                 .collect(Collectors.toList());
     }
 
     public void deleteById(Integer id) {
-         repository.deleteById(id);
+        log.info("Try to delete user with id: " + id);
+        repository.deleteById(id);
+        log.info("User with id: " + id + " no longer exists");
     }
 }
