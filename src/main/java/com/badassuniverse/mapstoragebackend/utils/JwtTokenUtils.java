@@ -1,7 +1,10 @@
 package com.badassuniverse.mapstoragebackend.utils;
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.GrantedAuthority;
@@ -50,10 +53,18 @@ public class JwtTokenUtils {
     }
 
     public Claims getAllClaimsFromToken(String token) {
-        return Jwts.parser()
-                .setSigningKey(secret)
-                .build()
-                .parseSignedClaims(token)
-                .getPayload();
+        try {
+            return Jwts.parser()
+                    .setSigningKey(secret)
+                    .build()
+                    .parseClaimsJws(token)
+                    .getBody();
+        } catch (ExpiredJwtException e) {
+            throw new JwtException("JWT has expired");
+        } catch (MalformedJwtException e) {
+            throw new JwtException("Malformed JWT token");
+        } catch (Exception e) {
+            throw new JwtException("Could not parse JWT token", e);
+        }
     }
 }
