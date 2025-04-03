@@ -36,13 +36,17 @@ public class JwtRequestFilter extends OncePerRequestFilter {
             if (!jwt.isBlank() || !jwt.isEmpty()) {
                 try {
                     username = jwtTokenUtils.getUsername(jwt);
+                    log.info("Username extracted from JWT: {}", username);
                 } catch (JwtException e) {
+                    log.error("JWT Exception: {}", e.getMessage());
                     response.sendError(
                             HttpServletResponse.SC_UNAUTHORIZED,
                             "Wrong credentials for request"
                     );
                     return ;
                 }
+            } else {
+                log.error("JWT token is blank.");
             }
         }
 
