@@ -1,12 +1,11 @@
 FROM gradle:latest AS build_layer
-WORKDIR /app
-COPY . /app/.
-RUN gradle build
+WORKDIR /home/app
+COPY --chown=gradle:gradle . .
+RUN chmod +x gradlew
+RUN ./gradlew clean build -x test
 
-FROM openjdk:latest
-ENV JAR_NAME=map-storage-backend-0.0.1-SNAPSHOT.jar
-ENV APP_HOME=/app
-WORKDIR $APP_HOME
-COPY --from=build_layer $APP_HOME .
+FROM eclipse-temurin:17-jre-alpine
+WORKDIR /app
+COPY --from=build_layer /home/app/build/libs/map-storage-backend-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
-ENTRYPOINT exec java -jar $APP_HOME/build/libs/$JAR_NAME
+ENTRYPOINT ["java", "-jar", "app.jar"]
